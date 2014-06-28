@@ -79,9 +79,7 @@ Make sure your CDN URL is working. If you have Cloudflare or something proxy-ish
 
 <strong>I have a post and the links still are local, even though the images are on CDN. What gives?</strong>
 
-This is a very rare case, and should no longer happen except in wild conditions where for some reason your OLD image URL doesn't match what WP thought it was. Sadly, you'll have to search/replace them after the fact for post content. 
-
-If this happens because of how a plugin is changing the visible domain URL (like WordPress MU Domain Mapping), please let me know which plugin and I'll put in a check to accommodate it as best I can.
+This is a very rare case, and should no longer happen except in wild conditions where for some reason your OLD image URL doesn't match what WP thought it was. Sadly,  you'll have to search/replace them after the fact for post content. If this happens because of how a plugin is changing the visible domain URL (like WordPress MU Domain Mapping), please let me know which plugin and I'll put in a check to accommodate it as best I can.
 
 Of note: Currently the official WordPress importers aren't standardized, so there's not 100% safe way to check.
 
@@ -102,13 +100,15 @@ Check if they're failing on the CDN alias, but they do work at the objects.dream
 
 == Changelog ==
 
+= 0.2 = 
+* June 2014, by Ipstenu
+* Changed SDK to newest version: 2.6.9 (<a href="http://blogs.aws.amazon.com/php/post/Tx2Q8T2MTERKJS4/Release-AWS-SDK-for-PHP-Version-2-6-9">official release notes</a>)
+
 = 0.1 =
-* 20 June 2014 by Ipstenu
+* 07 May 2014 by Ipstenu
 * Multisite works
 * Uploading old media works
 * Imports work
-* Updating to AWS 2.6.8
-* Works while DreamObjects Backup is installed
 
 = 0.1-beta = 
 * 01 April 2014 by Ipstenu
