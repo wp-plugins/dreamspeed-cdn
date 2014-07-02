@@ -3,7 +3,7 @@ Contributors: Ipstenu
 Tags: cloud, dreamhost, dreamspeed, backup
 Requires at least: 3.8
 Tested up to: 3.9
-Stable tag: 0.1
+Stable tag: 0.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -101,8 +101,8 @@ Check if they're failing on the CDN alias, but they do work at the objects.dream
 == Changelog ==
 
 = 0.2 = 
-* June 2014, by Ipstenu
-* Changed SDK to newest version: 2.6.9 (<a href="http://blogs.aws.amazon.com/php/post/Tx2Q8T2MTERKJS4/Release-AWS-SDK-for-PHP-Version-2-6-9">official release notes</a>)
+* July 2, 2014, by Ipstenu
+* Changed SDK to newest version: 2.6.10 (<a href="http://blogs.aws.amazon.com/php/post/TxDRVCHQYZSNN7/Release-AWS-SDK-for-PHP-Version-2-6-10">official release notes</a>)
 
 = 0.1 =
 * 07 May 2014 by Ipstenu
