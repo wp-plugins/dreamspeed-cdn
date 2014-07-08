@@ -3,7 +3,7 @@ Contributors: Ipstenu
 Tags: cloud, dreamhost, dreamspeed, backup
 Requires at least: 3.8
 Tested up to: 3.9
-Stable tag: 0.2
+Stable tag: 0.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -99,6 +99,10 @@ Check if they're failing on the CDN alias, but they do work at the objects.dream
 8. Migrate Exisiting Files section (on DreamSpeed CDN Configuration page)
 
 == Changelog ==
+
+= 0.3 =
+* July 8, 2014 by Ipstenu
+* Wouldn't upload media anymore. Redownloaded and applied SDK.
 
 = 0.2 = 
 * July 2, 2014, by Ipstenu
