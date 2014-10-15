@@ -22,11 +22,9 @@ class SseCpkListener implements EventSubscriberInterface
         /** @var CommandInterface $command */
         $command = $event['command'];
 
-        // Allows only HTTPS connections when using SSE-C
-        if ($command['SSECustomerKey'] ||
-            $command['CopySourceSSECustomerKey']
-        ) {
-            $this->validateScheme($command);
+        // Allows only HTTPS connections for SSE-C
+        if ($command->getClient()->getConfig('scheme') !== 'https') {
+            throw new RuntimeException('You must configure your S3 client to use HTTPS in order to use the SSE-C features.');
         }
 
         // Prepare the normal SSE-CPK headers
@@ -40,18 +38,8 @@ class SseCpkListener implements EventSubscriberInterface
         }
     }
 
-    private function validateScheme(CommandInterface $command)
+    private function prepareSseParams(CommandInterface $command, $isCopy = false)
     {
-        if ($command->getClient()->getConfig('scheme') !== 'https') {
-            throw new RuntimeException('You must configure your S3 client to '
-                . 'use HTTPS in order to use the SSE-C features.');
-        }
-    }
-
-    private function prepareSseParams(
-        CommandInterface $command,
-        $isCopy = false
-    ) {
         $prefix = $isCopy ? 'CopySource' : '';
 
         // Base64 encode the provided key
