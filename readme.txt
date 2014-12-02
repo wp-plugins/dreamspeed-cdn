@@ -65,7 +65,7 @@ Nope! New image uploads are copied first to your normal location, then sync'd up
 
 <strong>Can I force older images to be pushed?</strong>
 
-Yes. Go to the CDN page and at the bottom is a section "Migrate Exisiting Files" - If there's a checkbox and a button, you have files to upload, so check the box and press the button.
+Yes. Go to the CDN page and at the bottom is a section "Migrate Existing Files" - If there's a checkbox and a button, you have files to upload, so check the box and press the button.
 
 The uploader runs in chunks per hour, since it has to upload <em>all</em> image sizes, as well as edit your posts. If you have over 20k images, it may NOT work right, however.
 
@@ -110,7 +110,7 @@ Of note: Currently the official WordPress importers aren't standardized, so ther
 
 <strong>Why aren't my images found?</strong>
 
-Check if they're failing on the CDN alias, but they do work at the objects.dreamhost.com URL. If so, you somehow goofed your permissions. You have to go into the DreamObjects editor andf set permissions from PRIVATE to PUBLIC. This happens usually because the bucket was private when you made it.
+Check if they're failing on the CDN alias, but they do work at the objects.dreamhost.com URL. If so, you somehow goofed your permissions. You have to go into the DreamObjects editor and set permissions from PRIVATE to PUBLIC. This happens usually because the bucket was private when you made it.
 
 == Screenshots ==
 
@@ -121,9 +121,13 @@ Check if they're failing on the CDN alias, but they do work at the objects.dream
 5. DreamSpeed CDN Key Settings (filled in)
 6. DreamSpeed CDN Configuration Settings
 7. Media Library with CDN checkmarks
-8. Migrate Exisiting Files section (on DreamSpeed CDN Configuration page)
+8. Migrate Existing Files section (on DreamSpeed CDN Configuration page)
 
 == Changelog ==
+
+= 0.5.2b =
+* Dec 2, 2014 by Ipstenu
+* Adding Plugin icons, no code changed.
 
 = 0.5.1 && 0.5.2 =
 * Nov 4, 2014 by Ipstenu
