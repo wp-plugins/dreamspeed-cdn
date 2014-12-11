@@ -2,8 +2,8 @@
 Contributors: Ipstenu
 Tags: cloud, dreamhost, dreamspeed, backup
 Requires at least: 3.8
-Tested up to: 4.0
-Stable tag: 0.5.2
+Tested up to: 4.1
+Stable tag: 0.5.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -15,10 +15,15 @@ Connect your WordPress install to your DreamHost DreamSpeed CDN for supercharged
 
 This plugin automatically copies images, videos, documents, and any other media added through WordPress' media uploader to DreamSpeed. It then automatically replaces the URL to each media file with their respective DreamObjects URL or, if you have configured a CDN Alias, the respective custom URL. Image thumbnails are also copied to DreamSpeed and delivered similarly.
 
-Uploading files directly to DreamSpeed is not supported by this plugin. They are uploaded to your server first, via the WordPress media uploader, then copied to DreamSpeed. This allows you to roll back if needed!
+Uploading files directly to DreamSpeed is not supported by this plugin. They are uploaded to your server first, via the WordPress media uploader, then copied to DreamSpeed.
 
 Development happens on <a href="https://github.com/Ipstenu/dreamspeed/">Github</a>. Issues and Pull Requests welcome.
 
+= Known Conflicts =
+
+* Broken Link Checker - This plugin will cause the "Migrate Exisiting Files" to fail.
+
+= Credits =
 <em>This plugin is a spork (fork and combination) of <a href="https://wordpress.org/plugins/amazon-s3-and-cloudfront/">Amazon S3 and Cloudfront</a> and <a href="https://github.com/deliciousbrains/wp-amazon-web-services">Amazon Web Services</a>, both by the awesome Brad Touesnard.</em>
 
 == Installation ==
@@ -68,6 +73,10 @@ Nope! New image uploads are copied first to your normal location, then sync'd up
 Yes. Go to the CDN page and at the bottom is a section "Migrate Existing Files" - If there's a checkbox and a button, you have files to upload, so check the box and press the button.
 
 The uploader runs in chunks per hour, since it has to upload <em>all</em> image sizes, as well as edit your posts. If you have over 20k images, it may NOT work right, however.
+
+<strong>How long will it take to upload everything?</strong>
+
+That depends on how many files you have. It averages uploading 20 images per-hour, though that can change based on how large the images are and how many resizes you use.
 
 <strong>How can I check if an image is uploaded?</strong>
 
@@ -125,10 +134,19 @@ Check if they're failing on the CDN alias, but they do work at the objects.dream
 
 == Changelog ==
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+= 0.5.3 =
+* Dec 11, 2014 by Ipstenu
+* AWS SDK 2.7.9
+
 = 0.5.2b =
 * Dec 2, 2014 by Ipstenu
 * Adding Plugin icons, no code changed.
 
+>>>>>>> REL_0.5.3
 = 0.5.1 && 0.5.2 =
 * Nov 4, 2014 by Ipstenu
 * SSL Fix
@@ -142,6 +160,7 @@ Check if they're failing on the CDN alias, but they do work at the objects.dream
 * Aug 7, 2014, by Ipstenu
 * Enabled SSL force option
 
+>>>>>>> REL_0.5.1
 = 0.3.1 =
 * July 24, 2014, by Ipstenu
 * Changed SDK to newest version: 2.6.12 (<a href="http://blogs.aws.amazon.com/php/post/Tx2PDR0J3NL0YKN/Release-AWS-SDK-for-PHP-Version-2-6-12">official release notes</a>)
